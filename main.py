@@ -16,6 +16,10 @@ class User(BaseModel):
     password: str
 
 # Endpoints
+@app.get("/")
+def root():
+    return {"Hello World"}
+
 @app.post("/register/")
 async def register(user: User):
     try:
