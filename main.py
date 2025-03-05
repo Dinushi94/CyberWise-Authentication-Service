@@ -18,7 +18,7 @@ class User(BaseModel):
 # Endpoints
 @app.get("/")
 def root():
-    return {"Hello World"}
+    return{"Hello":"World"}
 
 @app.post("/register/")
 async def register(user: User):
